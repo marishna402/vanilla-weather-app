@@ -38,6 +38,6 @@ function displayTemperature(response) {
 
 let apiKey = "2c5b2d92c3d0024f4b508a4a4658c674";
 let city = "Düsseldorf";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}f&appid=${apiKey}&units=metric`;
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayTemperature);
