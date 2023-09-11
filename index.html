@@ -14,6 +14,7 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Vanilla Weather</title>
     <link rel="stylesheet" href="src/style.css" />
   </head>
@@ -23,7 +24,7 @@
       <div class="weather-app-wrap">
         <div class="weather-app">
           <div class="location">
-            <h1>Düsseldorf</h1>
+            <h1 id="city"></h1>
             <ul>
               <li>Thursday</li>
               <li>15:00</li>
@@ -36,14 +37,14 @@
                   src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
                   alt="partly_cloudy"
                 />
-                <strong> 27 </strong> °C | °F
+                <strong id="temperature"> </strong> °C | °F
               </div>
             </div>
             <div class="col-6">
               <ul>
                 <li>Precipitation</li>
-                <li>Humidity</li>
-                <li>Wind</li>
+                <li>Humidity: <span id="humidity"></span> %</li>
+                <li>Wind: <span id="wind"></span> Km/H</li>
               </ul>
             </div>
           </div>
